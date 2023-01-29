@@ -1,12 +1,12 @@
 # Oxford-Dictionary-Look-Up
 Chrome extension to look up words in [Oxford Dictionary](https://www.oxfordlearnersdictionaries.com/).
 ## Why this ?
-I'm so tired when looking up some words: Open a new tab -> Type Oxford Dictionary webpage -> Hit `Enter` -> Type a word to look up -> Hit `Enter`. 
+I'm so tired when looking up some words: Open a new tab -> Type Oxford Dictionary webpage (https://www.oxfordlearnersdictionaries.com/) -> Hit `Enter` -> Type a word to look up -> Hit `Enter`. 
 
 This extension will make the look up progress less painful when you just need to click/toggle the extension and search the word.
 
 ## Features
-- Look up at [Oxford Dictionary](https://www.oxfordlearnersdictionaries.com/) - The largest and most trusted free online dictionary for learners.
+- Look up at Oxford Dictionary - The largest and most trusted free online dictionary for learners.
 - Open Oxford Dictionary in a new tab after press `Enter` in the search box.
 - Simple but yet powerful. 
 
