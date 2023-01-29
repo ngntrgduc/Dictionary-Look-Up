@@ -21,3 +21,6 @@ git clone https://github.com/ngntrgduc/Oxford-Dictionary-Look-Up.git
 - **Edge:** `Extensions` -> `Manage Extensions` -> Turn on `Developer mode` -> Press `Load unpacked` and select the folder you have just cloned/downloaded.
 3. Make the extension more visible by `Pin` (Chrome)/`Show in toolbar` (Edge). And create a shortcut to toggle the extension easier in `Keyboard shortcuts` (I use `Alt + O`).
 4. Enjoy your brand new look up progress.
+
+## Screenshot
+![image](https://user-images.githubusercontent.com/47920109/215318655-2218acf5-2674-4a50-8799-95e7ffe5786a.png)
