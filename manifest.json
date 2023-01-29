@@ -1,0 +1,12 @@
+{
+    "name": "Oxford Dictionary Look Up",
+    "version": "1.0.0",
+    "description": "Chrome extension to look up words in Oxford Dictionary",
+    "manifest_version": 3,
+    "author": "Nguyen Trung Duc",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Oxford Dictionary Look Up",
+        "default_icon": "assets/oxford_icon.png"
+    }
+}
