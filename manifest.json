@@ -1,6 +1,6 @@
 {
     "name": "Oxford Dictionary Look Up",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Chrome extension to look up words in Oxford Dictionary",
     "manifest_version": 3,
     "author": "Nguyen Trung Duc",
