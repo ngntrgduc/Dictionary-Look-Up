@@ -23,4 +23,6 @@ git clone https://github.com/ngntrgduc/Oxford-Dictionary-Look-Up.git
 4. Enjoy your brand new look up process.
 
 ## Screenshot
-![image](https://user-images.githubusercontent.com/47920109/215318655-2218acf5-2674-4a50-8799-95e7ffe5786a.png)
+![image](https://user-images.githubusercontent.com/47920109/222422842-7d2a1b54-554c-42bb-af58-a0e623af139d.png)
+
+
