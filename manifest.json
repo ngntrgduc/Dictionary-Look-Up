@@ -1,6 +1,6 @@
 {
     "name": "Oxford Dictionary Look Up",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Extension to look up words in Oxford Dictionary",
     "manifest_version": 3,
     "author": "Nguyen Trung Duc",
