@@ -1,12 +1,12 @@
 {
-    "name": "Oxford Dictionary Look Up",
-    "version": "1.1.1",
-    "description": "Extension to look up words in Oxford Dictionary",
+    "name": "Dictionary Look Up",
+    "version": "2.0.0",
+    "description": "Extension to look up words painlessly",
     "manifest_version": 3,
     "author": "Nguyen Trung Duc",
     "action":{
         "default_popup": "index.html",
-        "default_title": "Oxford Dictionary Look Up",
-        "default_icon": "assets/oxford_icon.png"
+        "default_title": "Dictionary Look Up",
+        "default_icon": "assets/icon.png"
     }
 }
