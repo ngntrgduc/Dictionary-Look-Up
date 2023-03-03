@@ -35,3 +35,4 @@ git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
  keys to change and `Shift + Tab` to go back to the search box.
  
 ## Screenshot
+![image](https://user-images.githubusercontent.com/47920109/222754942-fe791266-0a32-4fde-b0c8-4e1044a8fc84.png)
