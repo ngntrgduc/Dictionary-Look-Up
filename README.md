@@ -40,7 +40,7 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 4. Enjoy your brand new look up process ✨. 
  
 ## Notes
-- This extension hide some infomations that's not useful on the websites. If you don't want to hide, delete `"content_scripts"` part in [manifest.json](https://github.com/ngntrgduc/Dictionary-Look-Up/blob/master/manifest.json#L12).
+- This extension hide some infomations that's not useful on the websites. If you don't want to hide, delete `"content_scripts"` part in [manifest.json](https://github.com/ngntrgduc/Dictionary-Look-Up/blob/master/manifest.json#L12#L21).
 
 ## Screenshot
 ![image](https://user-images.githubusercontent.com/47920109/222754942-fe791266-0a32-4fde-b0c8-4e1044a8fc84.png)
