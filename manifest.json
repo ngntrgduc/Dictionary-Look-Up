@@ -1,6 +1,6 @@
 {
     "name": "Dictionary Look Up",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "Extension to look up words painlessly",
     "manifest_version": 3,
     "author": "Nguyen Trung Duc",
@@ -12,11 +12,11 @@
     "content_scripts": [
         {
           "matches": ["https://dictionary.cambridge.org/*"],
-          "js": ["util/cambridge.js"]
+          "js": ["utils/cambridge.js"]
         },
         {
             "matches": ["https://www.oxfordlearnersdictionaries.com/*"],
-            "js": ["util/oxford.js"]
+            "js": ["utils/oxford.js"]
           }
     ]
 }
