@@ -33,7 +33,7 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 3. 
    - Make the extension more visible by `Pin` (Chrome) / `Show in toolbar` (Edge). 
    - Create a shortcut to toggle the extension easier in `Keyboard shortcuts` (I use `Alt + O`).
-   - If you want to change dictionary, use `Tab` key and arrow keys to change and `Shift + Tab` to go back to the search box. 
+   - If you want to change dictionary, use `Tab` key and arrow keys to change and use `Tab` again to go back to the search box. 
    - If you want to change default dictionary to Oxford, go to the source code folder and change order of option in [index.html](https://github.com/ngntrgduc/Dictionary-Look-Up/blob/master/index.html).
 
 4. Enjoy your brand new look up process ✨. 
