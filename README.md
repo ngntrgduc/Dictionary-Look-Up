@@ -5,7 +5,7 @@ Extension to look up words **painlessly**.
 
 ## Why this ?
 
-I'm so tired when looking up some words: Open a new tab -> Type Dictionary webpage -> Hit `Enter` -> Type a word to look up -> Hit `Enter`.
+I'm so tired when looking up some words: Open a new tab -> Type dictionary web page -> Hit `Enter` -> Type a word to look up -> Hit `Enter`.
 
 This extension will make the look up process less painful when you just need to toggle the extension and search the word.
 
