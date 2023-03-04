@@ -25,14 +25,18 @@ git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
 
 2. Load extension:
 
-- **Chrome:**  `Settings` -> `Extensions` -> Turn on `Developer mode` -> Press `Load unpacked` and select the folder you have just cloned/downloaded.
+- **Chrome:**  `Settings` -> `Extensions`.
+- **Edge:**  `Extensions` -> `Manage Extensions`.
 
-- **Edge:**  `Extensions` -> `Manage Extensions` -> Turn on `Developer mode` -> Press `Load unpacked` and select the folder you have just cloned/downloaded.
+Then turn on `Developer mode`. Finally, click `Load unpacked` and select the folder you have just cloned/downloaded.
 
-3. Make the extension more visible by `Pin` (Chrome) / `Show in toolbar` (Edge). And create a shortcut to toggle the extension easier in `Keyboard shortcuts` (I use `Alt + O`).
+3. 
+   - Make the extension more visible by `Pin` (Chrome) / `Show in toolbar` (Edge). 
+   - Create a shortcut to toggle the extension easier in `Keyboard shortcuts` (I use `Alt + O`).
+   - If you want to change dictionary, use `Tab` key and arrow keys to change and `Shift + Tab` to go back to the search box. 
+   - If you want to change default dictionary to Oxford, go to the source code folder and change order of option in [index.html](https://github.com/ngntrgduc/Dictionary-Look-Up/blob/master/index.html).
 
-4. Enjoy your brand new look up process ✨. If you want to change dictionary, use `Tab` key and arrow
- keys to change and `Shift + Tab` to go back to the search box.
+4. Enjoy your brand new look up process ✨. 
  
 ## Screenshot
 ![image](https://user-images.githubusercontent.com/47920109/222754942-fe791266-0a32-4fde-b0c8-4e1044a8fc84.png)
