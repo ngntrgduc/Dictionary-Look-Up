@@ -14,7 +14,7 @@ This extension will make the look up process less painful when you just need to 
 - Support dictionaries: [Cambridge](https://dictionary.cambridge.org/), [Oxford](https://www.oxfordlearnersdictionaries.com/).
 - Open dictionary in a new tab after press `Enter` in the search box.
 - Easily change dictionary to look up.
-- Hide some infomations that's not useful on the websites.
+- Hide some infomations that's not useful on the websites. Better UX.
 - Simple but yet powerful.
 
 ## How to use
