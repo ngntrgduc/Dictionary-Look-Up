@@ -7,6 +7,9 @@ document.getElementsByClassName("bb hax")[0].style.display = "none";
 // Hide Translation and Translator
 document.getElementsByClassName("pr lcs bh")[1].style.display = "none";
 
+// Hide pronunciation part
+document.getElementsByClassName("lmt-10 hax")[0].style.display = "none";
+
 // Hide heading infomation
 // document.getElementsByClassName("ti fs fs12 lmb-0 hw superentry")[0].style.display = "none";
 // document.getElementsByClassName("pr x lbb lb-cm")[0].style.display = "none";
