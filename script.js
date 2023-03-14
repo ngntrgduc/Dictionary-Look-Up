@@ -1,17 +1,22 @@
-document.querySelector('select').addEventListener('focus', function () {
+document.querySelector("select").addEventListener("focus", function () {
     let selectedDictionary = document.getElementById("dictionary").value;
     if (selectedDictionary == "Cambridge") {
-        document.getElementById('dictionary').value = "Oxford";
+        document.getElementById("dictionary").value = "Oxford";
     } else {
-        document.getElementById('dictionary').value = "Cambridge";
+        document.getElementById("dictionary").value = "Cambridge";
     }
     // Auto focus to search box after changed dictionary
-    document.querySelector('input').focus(); 
+    document.querySelector("input").focus(); 
 });
 
 document.getElementById("searchBox").addEventListener("keydown", function (e) {
-    if (e.key === 'Enter') {
+    if (e.key === "ArrowUp") {
+        document.getElementById("searchBox").value = localStorage.getItem("previous");
+    }
+
+    if (e.key === "Enter") {
         let word = e.target.value.toLowerCase().trim().replaceAll(" ", "-");
+        localStorage.setItem("previous", word);
         let selectedDictionary = document.getElementById("dictionary").value;
         if (selectedDictionary == "Cambridge") {
             link = "https://dictionary.cambridge.org/dictionary/english/" + word;
