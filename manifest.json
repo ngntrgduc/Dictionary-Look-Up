@@ -1,22 +1,22 @@
 {
     "name": "Dictionary Look Up",
-    "version": "2.2.1",
+    "version": "2.3.0",
     "description": "Extension to look up words painlessly",
     "manifest_version": 3,
     "author": "Nguyen Trung Duc",
-    "action":{
+    "action": {
         "default_popup": "index.html",
         "default_title": "Dictionary Look Up",
         "default_icon": "assets/icon.png"
     },
     "content_scripts": [
-        {
-          "matches": ["https://dictionary.cambridge.org/*"],
-          "js": ["utils/cambridge.js"]
+    	{
+            "matches": ["https://dictionary.cambridge.org/*"],
+            "js": ["utils/cambridge.js"]
         },
         {
-          "matches": ["https://www.oxfordlearnersdictionaries.com/*"],
-          "js": ["utils/oxford.js"]
+            "matches": ["https://www.oxfordlearnersdictionaries.com/*"],
+            "js": ["utils/oxford.js"]
         }
     ]
 }
