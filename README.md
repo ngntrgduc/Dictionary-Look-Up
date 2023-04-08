@@ -11,7 +11,7 @@ This extension will make the look up process less painful when you just need to 
 
 ## Features
 
-- Support dictionaries: [Cambridge](https://dictionary.cambridge.org/), [Oxford](https://www.oxfordlearnersdictionaries.com/).
+- Support dictionaries: [Cambridge](https://dictionary.cambridge.org/), [Oxford](https://www.oxfordlearnersdictionaries.com/), [Merriam-Webster](https://www.merriam-webster.com/).
 - Open dictionary in a new tab after press `Enter` in the search box.
 - Easily change dictionary via `Tab` key.
 - Get previous word when press `Up` key.
