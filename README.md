@@ -38,6 +38,3 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
    - If you want to change default dictionary to Oxford, go to the source code folder and change order of option in [index.html](https://github.com/ngntrgduc/Dictionary-Look-Up/blob/master/index.html).
 
 4. Enjoy your brand new look up process ✨. 
- 
-## Screenshot
-![image](https://user-images.githubusercontent.com/47920109/222754942-fe791266-0a32-4fde-b0c8-4e1044a8fc84.png)
