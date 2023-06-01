@@ -1,27 +1,27 @@
 // Removes all context menu items added by this extension
 // chrome.contextMenus.removeAll();
 
-const cambridge = {
-    id: "cambridge",
-    title: "Cambridge",
-    contexts: ["selection"]  
-}
-
-const oxford = {
-    id: "oxford",
-    title: "Oxford",
-    contexts: ["selection"]
-};
-
-const mw = {
-    id: "mw",
-    title: "Merriam-Webster",
-    contexts: ["selection"]
-};
-
-chrome.contextMenus.create(cambridge);
-chrome.contextMenus.create(oxford);
-chrome.contextMenus.create(mw);
+chrome.runtime.onInstalled.addListener(() => {
+    const cambridge = {
+        id: "cambridge",
+        title: "Cambridge",
+        contexts: ["selection"]  
+    }
+    const oxford = {
+        id: "oxford",
+        title: "Oxford",
+        contexts: ["selection"]
+    };
+    const mw = {
+        id: "mw",
+        title: "Merriam-Webster",
+        contexts: ["selection"]
+    };
+    
+    chrome.contextMenus.create(cambridge);
+    chrome.contextMenus.create(oxford);
+    chrome.contextMenus.create(mw);
+})
 
 chrome.contextMenus.onClicked.addListener(function(clicked) {
     if (clicked.selectionText) {
