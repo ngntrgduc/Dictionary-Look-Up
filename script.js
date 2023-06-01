@@ -23,14 +23,24 @@ document.getElementById("searchBox").addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
         let word = e.target.value.toLowerCase().trim().replaceAll(" ", "-");
         localStorage.setItem("previous", word);
+        const urls = [
+            "https://dictionary.cambridge.org/dictionary/english/" + word,
+            "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
+            "https://www.merriam-webster.com/dictionary/" + word
+        ]   
+        if (e.altKey) {
+            for (url of urls) {
+                chrome.tabs.create({ url: url });
+            }
+        }
         let selectedDictionary = document.getElementById("dictionary").value;
         if (selectedDictionary == "Cambridge") {
-            link = "https://dictionary.cambridge.org/dictionary/english/" + word;
+            url = urls[0];
         } else if (selectedDictionary == "Oxford") {
-            link = "https://www.oxfordlearnersdictionaries.com/definition/english/" + word;
+            url = urls[1];
         } else {
-            link = "https://www.merriam-webster.com/dictionary/" + word;
+            url = urls[2];
         }
-        window.open(link, '_blank');    
+        window.open(url, '_blank'); 
     }
 });
