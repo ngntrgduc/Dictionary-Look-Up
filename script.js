@@ -28,11 +28,13 @@ document.getElementById("searchBox").addEventListener("keydown", function (e) {
             "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
             "https://www.merriam-webster.com/dictionary/" + word
         ]   
+        
         if (e.altKey) {
             for (url of urls) {
                 chrome.tabs.create({ url: url });
             }
         }
+
         let selectedDictionary = document.getElementById("dictionary").value;
         if (selectedDictionary == "Cambridge") {
             url = urls[0];
@@ -41,6 +43,7 @@ document.getElementById("searchBox").addEventListener("keydown", function (e) {
         } else {
             url = urls[2];
         }
-        window.open(url, '_blank'); 
+        
+        chrome.tabs.create({ url: url });
     }
 });
