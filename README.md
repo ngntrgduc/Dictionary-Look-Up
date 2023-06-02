@@ -39,3 +39,6 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
    - If you want to change default dictionary, go to the source code folder and change order of option in [index.html](https://github.com/ngntrgduc/Dictionary-Look-Up/blob/master/index.html#L15-L17).
 
 4. Enjoy your brand new look up process ✨. 
+
+## Coffee
+If you like this project and want to support me, you can [buy me a coffee :coffee:](https://ko-fi.com/ngntrgduc).
