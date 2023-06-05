@@ -33,17 +33,16 @@ document.getElementById("searchBox").addEventListener("keydown", function (e) {
             for (url of urls) {
                 chrome.tabs.create({ url: url });
             }
-        }
-
-        let selectedDictionary = document.getElementById("dictionary").value;
-        if (selectedDictionary == "Cambridge") {
-            url = urls[0];
-        } else if (selectedDictionary == "Oxford") {
-            url = urls[1];
         } else {
-            url = urls[2];
+            let selectedDictionary = document.getElementById("dictionary").value;
+            if (selectedDictionary == "Cambridge") {
+                url = urls[0];
+            } else if (selectedDictionary == "Oxford") {
+                url = urls[1];
+            } else {
+                url = urls[2];
+            } 
+            chrome.tabs.create({ url: url });
         }
-        
-        chrome.tabs.create({ url: url });
     }
 });
