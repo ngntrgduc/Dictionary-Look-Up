@@ -12,6 +12,7 @@ This extension will make the look up process less painful because you just need 
 ## Features
 
 - Support dictionaries: [Cambridge](https://dictionary.cambridge.org/), [Oxford](https://www.oxfordlearnersdictionaries.com/), [Merriam-Webster](https://www.merriam-webster.com/).
+- Easily toggle extension via `Alt` + `O` (default).
 - Open dictionary in a new tab after press `Enter` in the search box.
 - Look up word in all dictionaries by press `Alt` + `Enter` in the search box.
 - Easily change dictionary via `Tab` key.
@@ -35,7 +36,7 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 
 3. 
    - Make the extension more visible by `Pin` (Chrome) / `Show in toolbar` (Edge). 
-   - Create a shortcut to toggle the extension easier in `Keyboard shortcuts` (I use `Alt` + `O`).
+   - Change shortcut in `Keyboard shortcuts` if needed.
    - If you want to change default dictionary, go to the source code folder and change order of option in [index.html](https://github.com/ngntrgduc/Dictionary-Look-Up/blob/master/index.html#L15-L17).
 
 4. Enjoy your brand new look up process ✨. 
