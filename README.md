@@ -17,27 +17,21 @@ This extension will make the look up process less painful because you just need 
 - Look up word in all dictionaries by press `Alt` + `Enter` in the search box.
 - Easily change dictionary via `Tab` key.
 - Get previous word when press `↑` key.
-- Select word and **right-click to look up**.
 - **Simple** but yet **powerful**.
 
 ## How to use
-1. Clone this repository / [download zip](https://github.com/ngntrgduc/Dictionary-Look-Up/archive/refs/heads/master.zip) and extract to a folder on your local machine.
+1. Clone this repository / [download zip](https://github.com/ngntrgduc/Dictionary-Look-Up/archive/refs/heads/firefox.zip) and extract to a folder on your local machine.
 
 ```git
-git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
+git clone --single-branch -b firefox https://github.com/ngntrgduc/Dictionary-Look-Up.git
 ```
 
-2. Load extension:
-
-- **Chrome:**  `Settings` -> `Extensions`.
-- **Edge:**    `Extensions` -> `Manage Extensions`.
-
-Then turn on `Developer mode`. Finally, click `Load unpacked` and select the folder you have just cloned/downloaded.
+2. Load extension on Firefox:
+Go to `about:debugging`, click `Load Temporary Add-on...`, then select `manifest.json` of the folder you have just cloned/downloaded.
 
 3. 
-   - Make the extension more visible by `Pin` (Chrome) / `Show in toolbar` (Edge). 
-   - Change shortcut in `Keyboard shortcuts` if needed.
-   - If you want to change default dictionary, go to the source code folder and change order of option in [index.html](https://github.com/ngntrgduc/Dictionary-Look-Up/blob/master/index.html#L15-L17).
+   - Make the extension more visible by `Pin to Toolbar`. 
+   - Change shortcut if needed.
 
 4. Enjoy your brand new look up process ✨. 
 
