@@ -23,5 +23,10 @@
                 "default": "Alt+O"
             }
         }
+    },
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "ngntrgduc@DictionaryLookUp.com"
+        }
     }
 }
