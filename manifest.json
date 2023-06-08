@@ -1,6 +1,6 @@
 {
     "name": "Dictionary Look Up",
-    "version": "2.6.2",
+    "version": "2.7.0",
     "description": "Extension to look up words painlessly",
     "manifest_version": 3,
     "author": "Nguyen Trung Duc",
@@ -15,12 +15,8 @@
         "default_icon": "assets/icon.png"
     },
     "permissions": [
-        "tabs",
-        "contextMenus"
+        "tabs"
     ],
-    "background": {
-        "service_worker": "background.js"
-    },
     "commands": {
         "_execute_action": {
             "suggested_key": {
