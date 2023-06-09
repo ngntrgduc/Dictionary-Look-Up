@@ -19,7 +19,10 @@ This extension will make the look up process less painful because you just need 
 - Get previous word when press `↑` key.
 - **Simple** but yet **powerful**.
 
-## How to use
+## Install
+Extension available on [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/).
+
+### Install from source
 1. Clone this repository / [download zip](https://github.com/ngntrgduc/Dictionary-Look-Up/archive/refs/heads/firefox.zip) and extract to a folder on your local machine.
 
 ```git
