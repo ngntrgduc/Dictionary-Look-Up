@@ -21,6 +21,8 @@ This extension will make the look up process less painful because you just need 
 - **Simple** but yet **powerful**.
 
 ## How to use
+**Note**: If you use Firefox, please go to the [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/)
+
 1. Clone this repository / [download zip](https://github.com/ngntrgduc/Dictionary-Look-Up/archive/refs/heads/master.zip) and extract to a folder on your local machine.
 
 ```git
