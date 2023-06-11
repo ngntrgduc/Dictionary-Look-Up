@@ -10,14 +10,7 @@ I'm so tired when looking up some words: Open a new tab -> Type dictionary web p
 This extension will make the look up process less painful because you just need to toggle the extension and look up the word.
 
 ## Features
-
-- Support dictionaries: [Cambridge](https://dictionary.cambridge.org/), [Oxford](https://www.oxfordlearnersdictionaries.com/), [Merriam-Webster](https://www.merriam-webster.com/).
-- Easily toggle extension via `Alt` + `O` (default).
-- Open dictionary in a new tab after press `Enter` in the search box.
-- Look up word in all dictionaries by press `Alt` + `Enter` in the search box.
-- Easily change dictionary via `Tab` key.
-- Get previous word when press `↑` key.
-- **Simple** but yet **powerful**.
+Same as Chrome/Edge version but without right click to look up feature.
 
 ## Install
 Extension available on [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/).
