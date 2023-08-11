@@ -21,28 +21,56 @@ document.getElementById("searchBox").addEventListener("keydown", function (e) {
     }
 
     if (e.key === "Enter") {
-        let word = e.target.value.toLowerCase().trim().replaceAll(" ", "-");
+        let word = e.target.value.toLowerCase().trim();
         localStorage.setItem("previous", word);
-        const urls = [
-            "https://dictionary.cambridge.org/dictionary/english/" + word,
-            "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
-            "https://www.merriam-webster.com/dictionary/" + word
-        ]   
-        
-        if (e.altKey) {
-            for (url of urls) {
-                chrome.tabs.create({ url: url });
+
+        let delimiter = ",";
+        if (word.includes(delimiter)) {
+            let words = word.split(",");
+            for (word of words) {
+                word = word.trim().replaceAll(" ", "-");
+                const urls = [
+                    "https://dictionary.cambridge.org/dictionary/english/" + word,
+                    "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
+                    "https://www.merriam-webster.com/dictionary/" + word
+                ]
+                let selectedDictionary = document.getElementById("dictionary").value;
+                if (selectedDictionary == "Cambridge") {
+                    url = urls[0];
+                } else if (selectedDictionary == "Oxford") {
+                    url = urls[1];
+                } else {
+                    url = urls[2];
+                } 
+                if (e.altKey) {
+                    for (url of urls) {
+                        chrome.tabs.create({ url: url });
+                    }
+                } else chrome.tabs.create({ url: url });
             }
         } else {
-            let selectedDictionary = document.getElementById("dictionary").value;
-            if (selectedDictionary == "Cambridge") {
-                url = urls[0];
-            } else if (selectedDictionary == "Oxford") {
-                url = urls[1];
+            word = word.replaceAll(" ", "-");
+            const urls = [
+                "https://dictionary.cambridge.org/dictionary/english/" + word,
+                "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
+                "https://www.merriam-webster.com/dictionary/" + word
+            ]
+            
+            if (e.altKey) {
+                for (url of urls) {
+                    chrome.tabs.create({ url: url });
+                }
             } else {
-                url = urls[2];
-            } 
-            chrome.tabs.create({ url: url });
+                let selectedDictionary = document.getElementById("dictionary").value;
+                if (selectedDictionary == "Cambridge") {
+                    url = urls[0];
+                } else if (selectedDictionary == "Oxford") {
+                    url = urls[1];
+                } else {
+                    url = urls[2];
+                } 
+                chrome.tabs.create({ url: url });
+            }
         }
     }
 });
