@@ -17,7 +17,7 @@ This extension will make the look up process less painful because you just need 
 - Look up word in all dictionaries by press `Alt` + `Enter` in the search box.
 - Easily change dictionary via `Tab` key.
 - Get previous word when press `↑` key.
-- Search multiple word at once, using seperator (`,`)
+- Search multiple word at once, using comma (`,`)
 - Select word and **right-click to look up**.
 - **Simple** but yet **powerful**.
 
