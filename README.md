@@ -47,7 +47,7 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 - [ ] Options page
   - [ ]  Select default dictionary (change order of url)
   - [ ]  Custom url to search (general purpose, like search video on Youtube, not only for dictionary)
-  - [ ]  Search multiple word at once, using seperator (user defined)
+  - [x]  Search multiple word at once, using seperator (`,`) ~~(user defined)~~ (maybe keep the extension/add-on simple)
 - [ ]  Right click to look up word (does it necessary or just a make the extension slower ?)
 - [ ] Auto read copied text when open the extension (no more Ctrl + V)
 - [ ] Change behavior of `Tab` key because clicking to change dictionary seem weird when it's just switch to other but not show the dictionary pane
