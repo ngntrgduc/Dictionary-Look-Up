@@ -48,6 +48,7 @@ document.getElementById("searchBox").addEventListener("keydown", function (e) {
                     }
                 } else browser.tabs.create({ url: url });
             }
+            window.close()
         } else {
             word = word.replaceAll(" ", "-");
             const urls = [
@@ -71,6 +72,7 @@ document.getElementById("searchBox").addEventListener("keydown", function (e) {
                 } 
                 browser.tabs.create({ url: url });
             }
+            window.close()
         }
     }
 });
