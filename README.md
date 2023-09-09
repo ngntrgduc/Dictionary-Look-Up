@@ -49,12 +49,16 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
   - [ ]  Select default dictionary (change order of url)
   - [ ]  Custom url to search (general purpose, like search video on Youtube, not only for dictionary)
   - [x]  Search multiple word at once, using seperator (`,`) ~~(user defined)~~ (maybe keep the extension/add-on simple)
-- [ ]  Right click to look up word (does it necessary or just a make the extension slower ?)
+  - [ ] Maybe change the seperator...
+- [ ]  ~~Right click to look up word (does it necessary or just a make the extension slower ?)~~ (typing vocab to look up is faster, and make it more memorable)
 - [ ] Auto read copied text when open the extension (no more Ctrl + V)
 - [ ] Change behavior of `Tab` key because clicking to change dictionary seem weird when it's just switch to other but not show the dictionary pane
 - [ ] Another port
   - [ ] ~~Chrome~~ (because it's cost 5$ fee to create account 🥲)
   - [ ] Edge
+- [ ] Recently, the autofocus to input box not working in Firefox, maybe switch to pure HTML/CSS?
+- [ ] ~~If search incorrect vocab, auto redirect to the search page with vocab (for Cambridge dictionary)~~
+- [ ] `Shift` + `Tab` to move back dictionary
 
 ## Contributing
 If you found a bug or want to contribute, feel free to open a issue / pull requests. 
