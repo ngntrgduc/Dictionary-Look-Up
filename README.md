@@ -10,7 +10,7 @@ I'm so tired when looking up some words: Open a new tab -> Type dictionary web p
 This extension will make the look up process less painful because you just need to toggle the extension and look up the word.
 
 ## Features
-Same as Chrome/Edge version but without right click to look up feature.
+Same as Chrome/Edge version.
 
 ## Install
 Extension available on [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/).
