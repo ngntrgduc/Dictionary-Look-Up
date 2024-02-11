@@ -12,16 +12,22 @@ function format(word) {
     return word.trim().replaceAll(" ", "-");
 }
 
-function lookUp(word, selected) {
+function lookUp(word, selectedDictionary) {
     const urls = getURLs(format(word));
-    let url = urls[selected];
+    let url = urls[selectedDictionary];
     chrome.tabs.create({ url: url });
 }
 
-// Focus to search box after changed dictionary
-document.querySelector("select").addEventListener("change", function() {
-    document.getElementById("searchBox").focus();
-});
+function getSelectedDictionary() {
+    return document.getElementById("dictionary").value;
+}
+
+// Focus to search box after changed dictionary or lose focus on select menu
+["change", "focusout"].forEach(event => 
+    document.querySelector("select").addEventListener(event, () => {
+        document.getElementById("searchBox").focus();  
+    })
+);
 
 document.getElementById("searchBox").addEventListener("keydown", function(e) {
     // Get previous searched
@@ -29,17 +35,20 @@ document.getElementById("searchBox").addEventListener("keydown", function(e) {
         document.getElementById("searchBox").value = localStorage.getItem("previous");
     }
 
-    // Change dictionary when Tab pressed
+    // Change dictionary when Tab or Shift + Tab pressed
     if (e.key === "Tab") {
         e.preventDefault();
-        let selected = document.getElementById("dictionary").value;
+        
+        const currentIndex = dictionaries.indexOf(getSelectedDictionary());
+        let nextIndex;
 
-        for (let index = 0; index < dictionaries.length; index++) {
-            if (dictionaries[index] == selected) {
-                let nextIndex = (index+1) % dictionaries.length;
-                document.getElementById("dictionary").value = dictionaries[nextIndex];
-            }
+        if (e.shiftKey) {
+            nextIndex = currentIndex === 0 ? dictionaries.length - 1 : currentIndex - 1;
+        } else {
+            nextIndex = (currentIndex+1) % dictionaries.length;
         }
+        
+        document.getElementById("dictionary").value = dictionaries[nextIndex];
     }
 
     if (e.key === "Enter") {
@@ -47,15 +56,14 @@ document.getElementById("searchBox").addEventListener("keydown", function(e) {
         localStorage.setItem("previous", word);
         
         let delimiter = ",";
-        let selected = document.getElementById("dictionary").value;
         
         if (word.includes(delimiter)) {
             let words = word.split(",");
             for (word of words) {
-                lookUp(word, selected);
+                lookUp(word, getSelectedDictionary());
             }
         } else {
-            lookUp(word, selected);
+            lookUp(word, getSelectedDictionary());
         }
     }
 });

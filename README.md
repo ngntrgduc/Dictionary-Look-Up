@@ -14,7 +14,7 @@ This extension will make the look up process less painful because you just need 
 - Support dictionaries: [Cambridge](https://dictionary.cambridge.org/), [Oxford](https://www.oxfordlearnersdictionaries.com/), [Merriam-Webster](https://www.merriam-webster.com/)
 - Easily toggle extension via `Alt` + `O` (default)
 - Open dictionary in a new tab after press `Enter` in the search box
-- Easily change dictionary via `Tab` key
+- Easily change dictionary via `Tab` and `Shift` + `Tab` key
 - Get previous word when press `↑` key
 - Search multiple word at once, using `,` (default)
 - **Simple** but yet **powerful**
@@ -56,9 +56,11 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
   - [ ] Edge
 - [ ] Recently, the autofocus to input box not working in Firefox, maybe switch to pure HTML/CSS?
 - [ ] ~~If search incorrect vocab, auto redirect to the search page with vocab (for Cambridge dictionary)~~ (too specific, and type again make vocab more memorable)
-- [ ] ~~`Shift` + `Tab` to move back dictionary~~ (open the select menu is better)
+- [x] `Shift` + `Tab` to move back dictionary
   - [x] Change/Fix/Remove focus behavior, maybe using event.key instead
 - [x] Remove and maybe add new feature for `Alt` + `Tab` instead. Because open all dictionaries for word is not neccessary, and maybe upgrade this extension to be more general (like vomnibar in Vimium), not only with dictionary look up
+- [ ] More limit of previous word?
+
 
 ## Contributing
 If you found a bug or want to contribute, feel free to open a issue/pull requests. 
