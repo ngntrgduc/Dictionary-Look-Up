@@ -1,78 +1,70 @@
 const dictionaries = ["Cambridge", "Oxford", "Merriam-Webster"];
 
-document.querySelector("select").addEventListener("focus", function () {
-    let selectedDictionary = document.getElementById("dictionary").value;
-
-    for (let i = 0; i < dictionaries.length; i++) {
-        if (dictionaries[i] == selectedDictionary) {
-            if (i < dictionaries.length - 1) {
-                document.getElementById("dictionary").value = dictionaries[i+1];
-            }
-            else document.getElementById("dictionary").value = dictionaries[0];
-        }   
+function getURLs(word) {
+    return  {
+        "Cambridge": "https://dictionary.cambridge.org/dictionary/english/" + word,
+        "Oxford": "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
+        "Merriam-Webster": "https://www.merriam-webster.com/dictionary/" + word
     }
-    // Auto focus to search box after changed dictionary
-    document.querySelector("input").focus(); 
-});
+}
 
-document.getElementById("searchBox").addEventListener("keydown", function (e) {
+function format(word) {
+    return word.trim().replaceAll(" ", "-");
+}
+
+function lookUp(word, selectedDictionary) {
+    const urls = getURLs(format(word));
+    let url = urls[selectedDictionary];
+    browser.tabs.create({ url: url });
+}
+
+function getSelectedDictionary() {
+    return document.getElementById("dictionary").value;
+}
+
+// Focus to search box after changed dictionary or lose focus on select menu
+["change", "focusout"].forEach(event => 
+    document.querySelector("select").addEventListener(event, () => {
+        document.getElementById("searchBox").focus();  
+    })
+);
+
+document.getElementById("searchBox").addEventListener("keydown", function(e) {
+    // Get previous searched
     if (e.key === "ArrowUp") {
         document.getElementById("searchBox").value = localStorage.getItem("previous");
+    }
+
+    // Change dictionary when Tab or Shift + Tab pressed
+    if (e.key === "Tab") {
+        e.preventDefault();
+        
+        const currentIndex = dictionaries.indexOf(getSelectedDictionary());
+        let nextIndex;
+
+        if (e.shiftKey) {
+            nextIndex = currentIndex === 0 ? dictionaries.length - 1 : currentIndex - 1;
+        } else {
+            nextIndex = (currentIndex+1) % dictionaries.length;
+        }
+        
+        document.getElementById("dictionary").value = dictionaries[nextIndex];
     }
 
     if (e.key === "Enter") {
         let word = e.target.value.toLowerCase().trim();
         localStorage.setItem("previous", word);
-
+        
         let delimiter = ",";
+        
         if (word.includes(delimiter)) {
             let words = word.split(",");
             for (word of words) {
-                word = word.trim().replaceAll(" ", "-");
-                const urls = [
-                    "https://dictionary.cambridge.org/dictionary/english/" + word,
-                    "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
-                    "https://www.merriam-webster.com/dictionary/" + word
-                ]
-                let selectedDictionary = document.getElementById("dictionary").value;
-                if (selectedDictionary == "Cambridge") {
-                    url = urls[0];
-                } else if (selectedDictionary == "Oxford") {
-                    url = urls[1];
-                } else {
-                    url = urls[2];
-                } 
-                if (e.altKey) {
-                    for (url of urls) {
-                        browser.tabs.create({ url: url });
-                    }
-                } else browser.tabs.create({ url: url });
+                lookUp(word, getSelectedDictionary());
             }
-            window.close()
         } else {
-            word = word.replaceAll(" ", "-");
-            const urls = [
-                "https://dictionary.cambridge.org/dictionary/english/" + word,
-                "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
-                "https://www.merriam-webster.com/dictionary/" + word
-            ]
-            
-            if (e.altKey) {
-                for (url of urls) {
-                    browser.tabs.create({ url: url });
-                }
-            } else {
-                let selectedDictionary = document.getElementById("dictionary").value;
-                if (selectedDictionary == "Cambridge") {
-                    url = urls[0];
-                } else if (selectedDictionary == "Oxford") {
-                    url = urls[1];
-                } else {
-                    url = urls[2];
-                } 
-                browser.tabs.create({ url: url });
-            }
-            window.close()
+            lookUp(word, getSelectedDictionary());
         }
+        window.close()
     }
 });
