@@ -18,23 +18,28 @@ function lookUp(word, selected) {
     chrome.tabs.create({ url: url });
 }
 
-document.querySelector("select").addEventListener("focus", function() {
-    let selected = document.getElementById("dictionary").value;
-
-    for (let index = 0; index < dictionaries.length; index++) {
-        if (dictionaries[index] == selected) {
-            let nextIndex = (index+1) % dictionaries.length;
-            document.getElementById("dictionary").value = dictionaries[nextIndex];
-        }
-    }
-    // Auto focus to search box after changed dictionary
-    document.querySelector("input").focus(); 
+// Focus to search box after changed dictionary
+document.querySelector("select").addEventListener("change", function() {
+    document.getElementById("searchBox").focus();
 });
 
 document.getElementById("searchBox").addEventListener("keydown", function(e) {
+    // Get previous searched
     if (e.key === "ArrowUp") {
-        // Get previous searched
         document.getElementById("searchBox").value = localStorage.getItem("previous");
+    }
+
+    // Change dictionary when Tab pressed
+    if (e.key === "Tab") {
+        e.preventDefault();
+        let selected = document.getElementById("dictionary").value;
+
+        for (let index = 0; index < dictionaries.length; index++) {
+            if (dictionaries[index] == selected) {
+                let nextIndex = (index+1) % dictionaries.length;
+                document.getElementById("dictionary").value = dictionaries[nextIndex];
+            }
+        }
     }
 
     if (e.key === "Enter") {
