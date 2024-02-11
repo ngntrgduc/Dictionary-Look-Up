@@ -1,76 +1,56 @@
 const dictionaries = ["Cambridge", "Oxford", "Merriam-Webster"];
 
-document.querySelector("select").addEventListener("focus", function () {
-    let selectedDictionary = document.getElementById("dictionary").value;
+function getURLs(word) {
+    return  {
+        "Cambridge": "https://dictionary.cambridge.org/dictionary/english/" + word,
+        "Oxford": "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
+        "Merriam-Webster": "https://www.merriam-webster.com/dictionary/" + word
+    }
+}
 
-    for (let i = 0; i < dictionaries.length; i++) {
-        if (dictionaries[i] == selectedDictionary) {
-            if (i < dictionaries.length - 1) {
-                document.getElementById("dictionary").value = dictionaries[i+1];
-            }
-            else document.getElementById("dictionary").value = dictionaries[0];
-        }   
+function format(word) {
+    return word.trim().replaceAll(" ", "-");
+}
+
+function lookUp(word, selected) {
+    const urls = getURLs(format(word));
+    let url = urls[selected];
+    chrome.tabs.create({ url: url });
+}
+
+document.querySelector("select").addEventListener("focus", function() {
+    let selected = document.getElementById("dictionary").value;
+
+    for (let index = 0; index < dictionaries.length; index++) {
+        if (dictionaries[index] == selected) {
+            let nextIndex = (index+1) % dictionaries.length;
+            document.getElementById("dictionary").value = dictionaries[nextIndex];
+        }
     }
     // Auto focus to search box after changed dictionary
     document.querySelector("input").focus(); 
 });
 
-document.getElementById("searchBox").addEventListener("keydown", function (e) {
+document.getElementById("searchBox").addEventListener("keydown", function(e) {
     if (e.key === "ArrowUp") {
+        // Get previous searched
         document.getElementById("searchBox").value = localStorage.getItem("previous");
     }
 
     if (e.key === "Enter") {
         let word = e.target.value.toLowerCase().trim();
         localStorage.setItem("previous", word);
-
+        
         let delimiter = ",";
+        let selected = document.getElementById("dictionary").value;
+        
         if (word.includes(delimiter)) {
             let words = word.split(",");
             for (word of words) {
-                word = word.trim().replaceAll(" ", "-");
-                const urls = [
-                    "https://dictionary.cambridge.org/dictionary/english/" + word,
-                    "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
-                    "https://www.merriam-webster.com/dictionary/" + word
-                ]
-                let selectedDictionary = document.getElementById("dictionary").value;
-                if (selectedDictionary == "Cambridge") {
-                    url = urls[0];
-                } else if (selectedDictionary == "Oxford") {
-                    url = urls[1];
-                } else {
-                    url = urls[2];
-                } 
-                if (e.altKey) {
-                    for (url of urls) {
-                        chrome.tabs.create({ url: url });
-                    }
-                } else chrome.tabs.create({ url: url });
+                lookUp(word, selected);
             }
         } else {
-            word = word.replaceAll(" ", "-");
-            const urls = [
-                "https://dictionary.cambridge.org/dictionary/english/" + word,
-                "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
-                "https://www.merriam-webster.com/dictionary/" + word
-            ]
-            
-            if (e.altKey) {
-                for (url of urls) {
-                    chrome.tabs.create({ url: url });
-                }
-            } else {
-                let selectedDictionary = document.getElementById("dictionary").value;
-                if (selectedDictionary == "Cambridge") {
-                    url = urls[0];
-                } else if (selectedDictionary == "Oxford") {
-                    url = urls[1];
-                } else {
-                    url = urls[2];
-                } 
-                chrome.tabs.create({ url: url });
-            }
+            lookUp(word, selected);
         }
     }
 });
