@@ -46,18 +46,18 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 - [ ] Options page
   - [ ]  Select default dictionary (change order of url)
   - [ ]  Custom url to search (general purpose, like search video on Youtube, not only for dictionary)
-  - [x]  Search multiple word at once, using seperator (`,`) ~~(user defined)~~ (maybe keep the extension/add-on simple)
-  - [ ] Maybe change the seperator...
+  - [ ] Custom seperator...
+- [x]  Search multiple word at once, using seperator (`,`) ~~(user defined)~~ (maybe keep the extension/add-on simple)
 - [ ]  ~~Right click to look up word (does it necessary or just a make the extension slower ?)~~ (typing vocab to look up is faster, and make it more memorable)
-- [ ] Auto read copied text when open the extension (no more Ctrl + V)
-- [ ] Change behavior of `Tab` key because clicking to change dictionary seem weird when it's just switch to other but not show the dictionary pane
+- [ ] ~~Auto read copied text when open the extension (no more Ctrl + V)~~ (the JS clipboard API is [limited availability](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#browser_compatibility))
+- [x] Change behavior of `Tab` key because clicking to change dictionary seem weird when it's just switch to other but not show the dictionary pane
 - [ ] Another port
   - [ ] ~~Chrome~~ (because it's cost 5$ fee to create account 🥲)
   - [ ] Edge
 - [ ] Recently, the autofocus to input box not working in Firefox, maybe switch to pure HTML/CSS?
-- [ ] ~~If search incorrect vocab, auto redirect to the search page with vocab (for Cambridge dictionary)~~
-- [ ] `Shift` + `Tab` to move back dictionary
-  - [ ] Change/Fix/Remove focus behavior, maybe using event.key instead
+- [ ] ~~If search incorrect vocab, auto redirect to the search page with vocab (for Cambridge dictionary)~~ (too specific, and type again make vocab more memorable)
+- [ ] ~~`Shift` + `Tab` to move back dictionary~~ (open the select menu is better)
+  - [x] Change/Fix/Remove focus behavior, maybe using event.key instead
 - [x] Remove and maybe add new feature for `Alt` + `Tab` instead. Because open all dictionaries for word is not neccessary, and maybe upgrade this extension to be more general (like vomnibar in Vimium), not only with dictionary look up
 
 ## Contributing
