@@ -17,12 +17,12 @@ This extension will make the look up process less painful because you just need 
 - Easily change dictionary via `Tab` and `Shift` + `Tab` key
 - Get previous word when press `↑` key
 - Search multiple word at once, using `,` (default)
-- **Simple** but yet **powerful**
+- **Simple** but yet **powerful**. **Time-saving**.
 
 ## Installation
-**Note**: If you use Firefox, please go to [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/), or you can checkout [`firefox` branch](https://github.com/ngntrgduc/Dictionary-Look-Up/tree/firefox).
+**Note**: If you use Firefox, the extension is available on [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/), or you can checkout [`firefox` branch](https://github.com/ngntrgduc/Dictionary-Look-Up/tree/firefox) for local installation.
 
-1. Clone this repository / [download zip](https://github.com/ngntrgduc/Dictionary-Look-Up/archive/refs/heads/master.zip) and extract to a folder on your local machine.
+1. Clone this repository/[download zip](https://github.com/ngntrgduc/Dictionary-Look-Up/archive/refs/heads/master.zip) and extract to a folder on your local machine.
 
 ```git
 git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
@@ -47,7 +47,7 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
   - [ ]  Select default dictionary (change order of url)
   - [ ]  Custom url to search (general purpose, like search video on Youtube, not only for dictionary)
   - [ ] Custom seperator...
-- [x]  Search multiple word at once, using seperator (`,`) ~~(user defined)~~ (maybe keep the extension/add-on simple)
+- [x]  Search multiple word at once, using seperator (`,`) ~~(user defined)~~ (maybe keep the extension simple)
 - [ ]  ~~Right click to look up word (does it necessary or just a make the extension slower ?)~~ (typing vocab to look up is faster, and make it more memorable)
 - [ ] ~~Auto read copied text when open the extension (no more Ctrl + V)~~ (the JS clipboard API is [limited availability](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#browser_compatibility))
 - [x] Change behavior of `Tab` key because clicking to change dictionary seem weird when it's just switch to other but not show the dictionary pane
@@ -66,4 +66,4 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 If you found a bug or want to contribute, feel free to open a issue/pull requests. 
 
 ## Coffee
-If you like this project and want to support me, you can [buy me a coffee :coffee:](https://ko-fi.com/ngntrgduc).
+If you like this project and you want to support me, you can [buy me a coffee :coffee:](https://ko-fi.com/ngntrgduc). Thank you very much 💖.
