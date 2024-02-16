@@ -5,7 +5,12 @@ Extension to look up words **painlessly**.
 
 ## Why this ?
 
-I'm so tired when looking up some words: Open a new tab -> Type dictionary web page -> Hit `Enter` -> Type a word to look up -> Hit `Enter`.
+I'm so tired when looking up some words: 
+1. Open a new tab 
+2. Type dictionary web page 
+3. Hit `Enter` 
+4. Type a word to look up 
+5. Hit `Enter`.
 
 This extension will make the look up process less painful because you just need to toggle the extension and look up the word.
 
@@ -13,7 +18,7 @@ This extension will make the look up process less painful because you just need 
 
 - Support dictionaries: [Cambridge](https://dictionary.cambridge.org/), [Oxford](https://www.oxfordlearnersdictionaries.com/), [Merriam-Webster](https://www.merriam-webster.com/)
 - Easily toggle extension via `Alt` + `O` (default)
-- Open dictionary in a new tab after press `Enter` in the search box
+- Open dictionary in a new tab after press `Enter` in the search box 
 - Easily change dictionary via `Tab` and `Shift` + `Tab` key
 - Get previous word when press `↑` key
 - Search multiple word at once, using `,` (default)
@@ -60,10 +65,11 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
   - [x] Change/Fix/Remove focus behavior, maybe using event.key instead
 - [x] Remove and maybe add new feature for `Alt` + `Tab` instead. Because open all dictionaries for word is not neccessary, and maybe upgrade this extension to be more general (like vomnibar in Vimium), not only with dictionary look up
 - [ ] More limit of previous word?
+- [ ] Make a GIF to demo how it works?
 
 
 ## Contributing
-If you found a bug or want to contribute, feel free to open a issue/pull requests. 
+If you found a bug or want to contribute, feel free to open a issue/pull requests. All contributions are welcomed.
 
 ## Coffee
 If you like this project and you want to support me, you can [buy me a coffee :coffee:](https://ko-fi.com/ngntrgduc). Thank you very much 💖.
