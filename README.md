@@ -3,15 +3,6 @@
 
 Extension to look up words **painlessly**.
 
-## Why this ?
-
-I'm so tired when looking up some words: Open a new tab -> Type dictionary web page -> Hit `Enter` -> Type a word to look up -> Hit `Enter`.
-
-This extension will make the look up process less painful because you just need to toggle the extension and look up the word.
-
-## Features
-Same as Chrome/Edge version.
-
 ## Install
 Extension available on [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/).
 
@@ -30,6 +21,3 @@ Go to `about:debugging`, click `Load Temporary Add-on...`, then select `manifest
    - Change shortcut if needed.
 
 4. Enjoy your brand new look up process ✨. 
-
-## Coffee
-If you like this project and want to support me, you can [buy me a coffee :coffee:](https://ko-fi.com/ngntrgduc).
