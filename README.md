@@ -65,7 +65,10 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 - [x] Remove and maybe add new feature for `Alt` + `Tab` instead. Because open all dictionaries for word is not neccessary, and maybe upgrade this extension to be more general (like vomnibar in Vimium), not only with dictionary look up
 - [ ] More limit of previous word?
 - [ ] Make a GIF to demo how it works?
-
+- [ ]  handle when no word is entered (which mean it not work will not thing in the search box or just type space), or when mistyping `,` 2 times or more
+- [ ]  add warning when input too many character. Open too much tabs in once can cause lag on user device
+    - [ ]  limit to 5? If exceed the limit, add delay
+- [ ]  more history of looked up vocab
 
 ## Contributing
 If you found a bug or want to contribute, feel free to open a issue/pull requests. All contributions are welcomed.
