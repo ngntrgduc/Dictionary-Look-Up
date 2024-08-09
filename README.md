@@ -17,8 +17,7 @@ This extension will make the look up process less painful because you just need 
 ## Features
 
 - Support dictionaries: [Cambridge](https://dictionary.cambridge.org/), [Oxford](https://www.oxfordlearnersdictionaries.com/), [Merriam-Webster](https://www.merriam-webster.com/)
-- Easily toggle extension via `Alt` + `O` (default)
-- Open dictionary in a new tab after press `Enter` in the search box 
+- Easily toggle extension via shortcut `Alt` + `O` (default)
 - Easily change dictionary via `Tab` and `Shift` + `Tab` key
 - Get previous word when press `↑` key
 - Search multiple word at once, using `,` (default)
@@ -47,19 +46,19 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 
 4. Enjoy your brand new look up process ✨. 
 
-## Todo
+## Todo/Idea
 - [ ] Options page
   - [ ]  Select default dictionary (change order of url)
   - [ ]  Custom url to search (general purpose, like search video on Youtube, not only for dictionary)
   - [ ] Custom seperator...
+  - [ ] Add option to remove Tabbing behavior, maybe some people refer the default behavior
 - [x]  Search multiple word at once, using seperator (`,`) ~~(user defined)~~ (maybe keep the extension simple)
-- [ ]  ~~Right click to look up word (does it necessary or just a make the extension slower ?)~~ (typing vocab to look up is faster, and make it more memorable)
 - [ ] ~~Auto read copied text when open the extension (no more Ctrl + V)~~ (the JS clipboard API is [limited availability](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#browser_compatibility))
 - [x] Change behavior of `Tab` key because clicking to change dictionary seem weird when it's just switch to other but not show the dictionary pane
 - [ ] Another port
   - [ ] ~~Chrome~~ (because it's cost 5$ fee to create account 🥲)
   - [ ] Edge
-- [ ] Recently, the autofocus to input box not working in Firefox, maybe switch to pure HTML/CSS?
+- [ ] autofocus to input box not working correctly in Firefox
 - [ ] ~~If search incorrect vocab, auto redirect to the search page with vocab (for Cambridge dictionary)~~ (too specific, and type again make vocab more memorable)
 - [x] `Shift` + `Tab` to move back dictionary
   - [x] Change/Fix/Remove focus behavior, maybe using event.key instead
