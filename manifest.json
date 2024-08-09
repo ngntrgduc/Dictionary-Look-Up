@@ -15,8 +15,7 @@
         "default_icon": "assets/icon.png"
     },
     "permissions": [
-        "tabs",
-        "contextMenus"
+        "tabs"
     ],
     "commands": {
         "_execute_action": {
