@@ -3,6 +3,8 @@
 
 Extension to look up words **painlessly**.
 
+![](/images/dlu.png)
+
 ## Why this ?
 
 I'm so tired when looking up some words: 
