@@ -1,4 +1,13 @@
 const dictionaries = ["Cambridge", "Oxford", "Merriam-Webster"];
+const searchBox = document.getElementById("searchBox");
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        if (document.activeElement !== searchBox) {
+            searchBox.focus() // Workaround for Firefox autofocus
+        }
+    }, 10)
+})
 
 function getURLs(word) {
     return  {
@@ -25,20 +34,19 @@ function getSelectedDictionary() {
 // Focus to search box after changed dictionary or lose focus on select menu
 ["change", "focusout"].forEach(event => 
     document.querySelector("select").addEventListener(event, () => {
-        document.getElementById("searchBox").focus();  
+        searchBox.focus();  
     })
 );
 
-document.getElementById("searchBox").addEventListener("keydown", function(e) {
+searchBox.addEventListener("keydown", function(e) {
     // Get previous searched
     if (e.key === "ArrowUp") {
-        document.getElementById("searchBox").value = localStorage.getItem("previous");
+        searchBox.value = localStorage.getItem("previous");
     }
 
     // Change dictionary when Tab or Shift + Tab pressed
     if (e.key === "Tab") {
         e.preventDefault();
-        
         const currentIndex = dictionaries.indexOf(getSelectedDictionary());
         let nextIndex;
 
