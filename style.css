@@ -1,0 +1,25 @@
+body {
+    width: 370px;
+    margin: 15px 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input,
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    background-color: white;
+}
+
+input:focus {
+    outline: 0;
+    border-color: rgb(0, 98, 255);
+    box-shadow: 0 0 0 0.3em rgba(0, 98, 255, 0.2);
+}
