@@ -13,6 +13,7 @@ function format(word) {
 }
 
 function lookUp(word, selectedDictionary) {
+    if (!word.trim()) return;
     const urls = getURLs(format(word));
     let url = urls[selectedDictionary];
     chrome.tabs.create({ url: url });
