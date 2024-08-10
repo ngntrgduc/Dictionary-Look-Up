@@ -4,6 +4,7 @@
     "description": "Extension to look up words painlessly",
     "manifest_version": 3,
     "author": "Nguyen Trung Duc",
+    "homepage_url": "https://github.com/ngntrgduc/Dictionary-Look-Up",
     "icons": {
         "16": "assets/icon16.png",
         "32": "assets/icon32.png",
