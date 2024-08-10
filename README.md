@@ -50,22 +50,22 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 
 ## Todo/Idea
 - [ ] Options page
-  - [ ]  Select default dictionary (change order of URL)
-  - [ ]  Custom URL to search (general purpose, like search video on Youtube, not only for dictionary)
-  - [ ] Custom seperator...
-  - [ ] Add option to remove Tabbing behavior, maybe some people prefer the default behavior
+    - [ ]  Select default dictionary (change order of URL)
+    - [ ]  Custom URL to search (general purpose, like search video on Youtube, not only for dictionary)
+    - [ ] Custom seperator...
+    - [ ] Add option to remove Tabbing behavior, maybe some people prefer the default behavior
 - [ ] Another port
-  - [ ] ~~Chrome~~ (because it's cost 5$ fee to create account 🥲)
-  - [ ] Edge
+    - [ ] ~~Chrome~~ (because it's cost 5$ fee to create account 🥲)
+    - [ ] Edge
 - [ ] Make a GIF to demo how it works.
 - [ ] Add warning when inputting too many characters. Open too many tabs at once can cause lag on the user's device
-    - [ ]  limit to 5 words? If it exceeds this limit, add a delay
+    - [ ]  limit to 5 words? If it exceeds this limit, add a delay
 
 ### Done
 - [x] Search multiple words at once, using separator (`,`) ~~(user-defined)~~ (keep the extension simple)
 - [x] Change the behavior of the `Tab` key because clicking to change the dictionary seems weird when it's just switched to another but does not show the dictionary pane
 - [x] `Shift` + `Tab` to move back dictionary
-  - [x] Change/Fix/Remove focus behavior, maybe using event.key instead
+    - [x] Change/Fix/Remove focus behavior, maybe using event.key instead
 - [x] Remove and maybe add a new feature for `Alt` + `Tab` instead. Because opening all dictionaries for a word is not necessary, and maybe upgrade this extension to be more general (like Vomnibar in Vimium), not only with dictionary look up
 - [x] Fix autofocus on Firefox
 - [x] Handle when no word is entered: won't work if nothing in the search box or just type space, or when mistyping `,`
