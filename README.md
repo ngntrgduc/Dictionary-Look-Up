@@ -1,5 +1,5 @@
 
-# Dictionary-Look-Up ![](https://img.shields.io/github/manifest-json/v/ngntrgduc/Dictionary-Look-Up?style=flat-square)
+# Dictionary-Look-Up
 
 Extension to look up words **painlessly**.
 
