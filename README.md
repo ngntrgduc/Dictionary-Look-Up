@@ -12,7 +12,7 @@ I'm so tired when looking up some words:
 2. Type dictionary web page 
 3. Hit `Enter` 
 4. Type a word to look up 
-5. Hit `Enter`.
+5. Hit `Enter`
 
 This extension will make the look up process less painful because you just need to toggle the extension and look up the word.
 
@@ -23,7 +23,7 @@ This extension will make the look up process less painful because you just need 
 - Easily change dictionary via `Tab` and `Shift` + `Tab` key
 - Get previous word when press `↑` key
 - Search multiple word at once, using `,` (default)
-- **Simple** but yet **powerful**. **Time-saving**.
+- **Simple** but yet **powerful**, **time-saving**
 
 ## Installation
 **Note**: If you use Firefox, the extension is available on [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/), or you can checkout [`firefox` branch](https://github.com/ngntrgduc/Dictionary-Look-Up/tree/firefox) for local installation.
@@ -50,27 +50,31 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 
 ## Todo/Idea
 - [ ] Options page
-  - [ ]  Select default dictionary (change order of url)
-  - [ ]  Custom url to search (general purpose, like search video on Youtube, not only for dictionary)
-  - [ ] Custom seperator...
-  - [ ] Add option to remove Tabbing behavior, maybe some people refer the default behavior
-- [x]  Search multiple word at once, using seperator (`,`) ~~(user defined)~~ (maybe keep the extension simple)
-- [ ] ~~Auto read copied text when open the extension (no more Ctrl + V)~~ (the JS clipboard API is [limited availability](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#browser_compatibility))
-- [x] Change behavior of `Tab` key because clicking to change dictionary seem weird when it's just switch to other but not show the dictionary pane
+  - [ ]  Select default dictionary (change order of URL)
+  - [ ]  Custom URL to search (general purpose, like search video on Youtube, not only for dictionary)
+  - [ ] Custom seperator...
+  - [ ] Add option to remove Tabbing behavior, maybe some people prefer the default behavior
 - [ ] Another port
-  - [ ] ~~Chrome~~ (because it's cost 5$ fee to create account 🥲)
-  - [ ] Edge
-- [ ] autofocus to input box not working correctly in Firefox
-- [ ] ~~If search incorrect vocab, auto redirect to the search page with vocab (for Cambridge dictionary)~~ (too specific, and type again make vocab more memorable)
+  - [ ] ~~Chrome~~ (because it's cost 5$ fee to create account 🥲)
+  - [ ] Edge
+- [ ] Make a GIF to demo how it works.
+- [ ] Handle when no word is entered: won't work if nothing in the search box or just type space), or when mistyping `,` 2 times or more
+- [ ] Add warning when inputting too many characters. Open too many tabs at once can cause lag on the user's device
+    - [ ]  limit to 5 words? If it exceeds this limit, add a delay
+
+### Done
+- [x] Search multiple words at once, using separator (`,`) ~~(user-defined)~~ (keep the extension simple)
+- [x] Change the behavior of the `Tab` key because clicking to change the dictionary seems weird when it's just switched to another but does not show the dictionary pane
 - [x] `Shift` + `Tab` to move back dictionary
-  - [x] Change/Fix/Remove focus behavior, maybe using event.key instead
-- [x] Remove and maybe add new feature for `Alt` + `Tab` instead. Because open all dictionaries for word is not neccessary, and maybe upgrade this extension to be more general (like vomnibar in Vimium), not only with dictionary look up
-- [ ] More limit of previous word?
-- [ ] Make a GIF to demo how it works?
-- [ ]  handle when no word is entered (which mean it not work will not thing in the search box or just type space), or when mistyping `,` 2 times or more
-- [ ]  add warning when input too many character. Open too much tabs in once can cause lag on user device
-    - [ ]  limit to 5? If exceed the limit, add delay
-- [ ]  more history of looked up vocab
+  - [x] Change/Fix/Remove focus behavior, maybe using event.key instead
+- [x] Remove and maybe add a new feature for `Alt` + `Tab` instead. Because opening all dictionaries for a word is not necessary, and maybe upgrade this extension to be more general (like Vomnibar in Vimium), not only with dictionary look up
+- [x] Fix autofocus on Firefox
+
+### Abandoned
+- Auto read copied text when opening the extension, no more Ctrl + V (the JS clipboard API is [limited availability](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#browser_compatibility))
+- If search incorrect vocab, auto redirect to the search page with vocab (for Cambridge dictionary) (too specific, and type again make the vocab more memorable)
+- More limit of the previous word? (not optimal, use `Ctrl + H` instead)
+
 
 ## Contributing
 If you found a bug or want to contribute, feel free to open a issue/pull requests. All contributions are welcomed.
