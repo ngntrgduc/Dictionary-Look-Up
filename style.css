@@ -16,10 +16,12 @@ select {
     border: 1px solid gray;
     border-radius: 8px;
     background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #303030;
 }
 
 input:focus {
     outline: 0;
     border-color: rgb(0, 98, 255);
-    box-shadow: 0 0 0 0.3em rgba(0, 98, 255, 0.2);
+    box-shadow: 0 0 0 0.2em rgba(0, 98, 255, 0.2);
 }
