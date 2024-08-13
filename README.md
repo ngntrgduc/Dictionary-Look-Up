@@ -39,7 +39,8 @@ git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
 - **Chrome:**  `Settings` -> `Extensions`.
 - **Edge:**    `Extensions` -> `Manage Extensions`.
 
-Then turn on `Developer mode`. Finally, click `Load unpacked` and select the folder you have just cloned/downloaded.
+Then turn on `Developer mode`. Finally, click `Load unpacked` and select the `chromium` folder.
+- **Firefox:** Go to `about:debugging`, click `Load Temporary Add-on...`, then select `manifest.json` in the `firefox` folder.
 
 3. 
    - Make the extension more visible by `Pin` (Chrome)/`Show in toolbar` (Edge). 
