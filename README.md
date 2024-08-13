@@ -1,5 +1,6 @@
 
 # Dictionary-Look-Up
+# Dictionary-Look-Up
 
 Extension to look up words **painlessly**.
 
@@ -31,15 +32,11 @@ This extension will make the look up process less painful because you just need 
 1. Clone this repository/[download zip](https://github.com/ngntrgduc/Dictionary-Look-Up/archive/refs/heads/master.zip) and extract to a folder on your local machine.
 
 ```git
-git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
+git clone --single-branch -b firefox https://github.com/ngntrgduc/Dictionary-Look-Up.git
 ```
 
-2. Load extension:
-
-- **Chrome:**  `Settings` -> `Extensions`.
-- **Edge:**    `Extensions` -> `Manage Extensions`.
-
-Then turn on `Developer mode`. Finally, click `Load unpacked` and select the folder you have just cloned/downloaded.
+2. Load extension on Firefox:
+Go to `about:debugging`, click `Load Temporary Add-on...`, then select `manifest.json` of the folder you have just cloned/downloaded.
 
 3. 
    - Make the extension more visible by `Pin` (Chrome)/`Show in toolbar` (Edge). 

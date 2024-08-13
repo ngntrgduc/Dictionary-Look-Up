@@ -1,6 +1,14 @@
 const dictionaries = ["Cambridge", "Oxford", "Merriam-Webster"];
 const searchBox = document.getElementById("searchBox");
 
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        if (document.activeElement !== searchBox) {
+            searchBox.focus() // Workaround for Firefox autofocus
+        }
+    }, 10)
+})
+
 function getURLs(word) {
     return  {
         "Cambridge": "https://dictionary.cambridge.org/dictionary/english/" + word,
@@ -17,7 +25,7 @@ function lookUp(word, selectedDictionary) {
     if (!word.trim()) return;
     const urls = getURLs(format(word));
     let url = urls[selectedDictionary];
-    chrome.tabs.create({ url: url });
+    browser.tabs.create({ url: url });
 }
 
 function getSelectedDictionary() {
@@ -43,7 +51,6 @@ searchBox.addEventListener('input', (e) => {
     }
 });
 
-
 searchBox.addEventListener("keydown", function(e) {
     // Get previous searched
     if (e.key === "ArrowUp") {
@@ -53,7 +60,6 @@ searchBox.addEventListener("keydown", function(e) {
     // Change dictionary when Tab or Shift + Tab pressed
     if (e.key === "Tab") {
         e.preventDefault();
-        
         const currentIndex = dictionaries.indexOf(getSelectedDictionary());
         let nextIndex;
 
@@ -80,5 +86,6 @@ searchBox.addEventListener("keydown", function(e) {
         } else {
             lookUp(word, getSelectedDictionary());
         }
+        window.close()
     }
 });
