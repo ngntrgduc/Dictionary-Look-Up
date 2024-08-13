@@ -1,5 +1,3 @@
-
-# Dictionary-Look-Up
 # Dictionary-Look-Up
 
 Extension to look up words **painlessly**.
@@ -29,7 +27,7 @@ This extension will make the look up process less painful because you just need 
 ## Installation
 [![](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png)](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/)
 
-### Local installation
+### Local
 
 1. Clone this repository/[download zip](https://github.com/ngntrgduc/Dictionary-Look-Up/archive/refs/heads/master.zip) and extract to a folder on your local machine.
 
