@@ -27,16 +27,21 @@ This extension will make the look up process less painful because you just need 
 - **Simple** but yet **powerful**, **time-saving**
 
 ## Installation
-**Note**: If you use Firefox, the extension is available on [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/), or you can checkout [`firefox` branch](https://github.com/ngntrgduc/Dictionary-Look-Up/tree/firefox) for local installation.
+[![](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png)](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/)
+
+### Local installation
 
 1. Clone this repository/[download zip](https://github.com/ngntrgduc/Dictionary-Look-Up/archive/refs/heads/master.zip) and extract to a folder on your local machine.
 
 ```git
-git clone --single-branch -b firefox https://github.com/ngntrgduc/Dictionary-Look-Up.git
+git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
 ```
 
-2. Load extension on Firefox:
-Go to `about:debugging`, click `Load Temporary Add-on...`, then select `manifest.json` of the folder you have just cloned/downloaded.
+2. Load extension:
+- **Chrome:**  `Settings` -> `Extensions`.
+- **Edge:**    `Extensions` -> `Manage Extensions`.
+
+Then turn on `Developer mode`. Finally, click `Load unpacked` and select the folder you have just cloned/downloaded.
 
 3. 
    - Make the extension more visible by `Pin` (Chrome)/`Show in toolbar` (Edge). 
