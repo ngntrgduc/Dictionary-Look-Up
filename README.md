@@ -36,14 +36,14 @@ git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
 ```
 
 2. Load extension:
-#### Chromium
-- **Chrome:**  `Settings` -> `Extensions`.
-- **Edge:**    `Extensions` -> `Manage Extensions`.
+    #### Chromium
+    - **Chrome:**  `Settings` -> `Extensions`.
+    - **Edge:**    `Extensions` -> `Manage Extensions`.
 
-Then turn on `Developer mode`. Finally, click `Load unpacked` and select the `chromium` folder.
+    Then turn on `Developer mode`. Finally, click `Load unpacked` and select the `chromium` folder.
 
-#### Firefox
-Go to `about:debugging`, click `Load Temporary Add-on...`, then select `manifest.json` in the `firefox` folder.
+    #### Firefox
+    Go to `about:debugging`, click `Load Temporary Add-on...`, then select `manifest.json` in the `firefox` folder.
 
 ## Todo/Idea
 - [ ] Options page
