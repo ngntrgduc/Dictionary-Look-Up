@@ -36,18 +36,14 @@ git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
 ```
 
 2. Load extension:
+#### Chromium
 - **Chrome:**  `Settings` -> `Extensions`.
 - **Edge:**    `Extensions` -> `Manage Extensions`.
 
 Then turn on `Developer mode`. Finally, click `Load unpacked` and select the `chromium` folder.
-- **Firefox:** Go to `about:debugging`, click `Load Temporary Add-on...`, then select `manifest.json` in the `firefox` folder.
 
-3. 
-   - Make the extension more visible by `Pin` (Chrome)/`Show in toolbar` (Edge). 
-   - Change shortcut in `Keyboard shortcuts` if needed.
-   - If you want to change default dictionary, go to the source code folder and change order of option in [index.html](https://github.com/ngntrgduc/Dictionary-Look-Up/blob/master/index.html#L15-L17).
-
-4. Enjoy your brand new look up process ✨. 
+#### Firefox
+Go to `about:debugging`, click `Load Temporary Add-on...`, then select `manifest.json` in the `firefox` folder.
 
 ## Todo/Idea
 - [ ] Options page
@@ -74,10 +70,9 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the `ch
 
 ### Abandoned
 - Auto read copied text when opening the extension, no more Ctrl + V (the JS clipboard API is [limited availability](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#browser_compatibility))
-- If search incorrect vocab, auto redirect to the search page with vocab (for Cambridge dictionary) (too specific, and type again make the vocab more memorable)
+- If search incorrect word, auto redirect to the search page with word (for Cambridge dictionary) (too specific, and type again make the word more memorable)
 - More limit of the previous word? (not optimal, use `Ctrl + H` instead)
-- Check invalid characters using regex (résumé, cliché, ... are valid vocab with  character `é`)
-
+- Check invalid characters using regex (résumé, cliché, ... are valid word with character `é`)
 
 ## Contributing
 If you found a bug or want to contribute, feel free to open a issue/pull requests. All contributions are welcomed.
