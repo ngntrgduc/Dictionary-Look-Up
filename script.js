@@ -31,6 +31,19 @@ function getSelectedDictionary() {
     })
 );
 
+searchBox.addEventListener('input', (e) => {
+    const maxLength = e.target.maxLength;
+    const currentLength = e.target.value.length;
+
+    // Add the error class when input length equals maxlength
+    if (currentLength >= maxLength) {
+        e.target.classList.add('error');
+    } else {
+        e.target.classList.remove('error');
+    }
+});
+
+
 searchBox.addEventListener("keydown", function(e) {
     // Get previous searched
     if (e.key === "ArrowUp") {

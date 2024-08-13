@@ -13,7 +13,7 @@ input,
 select {
     padding: 8px;
     font-size: 16px;
-    border: 1px solid gray;
+    border: 1px solid silver;
     border-radius: 8px;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -22,6 +22,11 @@ select {
 
 input:focus {
     outline: 0;
-    border-color: rgb(0, 98, 255);
-    box-shadow: 0 0 0 0.2em rgba(0, 98, 255, 0.2);
+    border-color: #95c0fe;
+    box-shadow: 0 0 0 0.2em #c2daff;
+}
+
+input.error {
+    border-color: #dd4b5a;
+    box-shadow: 0 0 0 0.2em #f6ccd0;
 }
