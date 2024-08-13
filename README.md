@@ -69,11 +69,13 @@ Then turn on `Developer mode`. Finally, click `Load unpacked` and select the fol
 - [x] Remove and maybe add a new feature for `Alt` + `Tab` instead. Because opening all dictionaries for a word is not necessary, and maybe upgrade this extension to be more general (like Vomnibar in Vimium), not only with dictionary look up
 - [x] Fix autofocus on Firefox
 - [x] Handle when no word is entered: won't work if nothing in the search box or just type space, or when mistyping `,`
+- [x] Add max length to the input. Prevent the user from miscopying long paragraphs or sentences or looking up too many words.
 
 ### Abandoned
 - Auto read copied text when opening the extension, no more Ctrl + V (the JS clipboard API is [limited availability](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API#browser_compatibility))
 - If search incorrect vocab, auto redirect to the search page with vocab (for Cambridge dictionary) (too specific, and type again make the vocab more memorable)
 - More limit of the previous word? (not optimal, use `Ctrl + H` instead)
+- Check invalid characters using regex (résumé, cliché, ... are valid vocab with  character `é`)
 
 
 ## Contributing
