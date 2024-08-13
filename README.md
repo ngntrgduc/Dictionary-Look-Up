@@ -25,7 +25,7 @@ This extension will make the look up process less painful because you just need 
 - **Simple** but yet **powerful**, **time-saving**
 
 ## Installation
-[![](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png)](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/)
+Extension available on [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/).
 
 ### Local
 
