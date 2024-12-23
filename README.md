@@ -25,7 +25,10 @@ This extension will make the look up process less painful because you just need 
 - **Simple** but yet **powerful**, **time-saving**
 
 ## Installation
+![](https://img.shields.io/amo/users/dictionary-look-up?style=for-the-badge&label=Firefox%20Addons%20users)
+
 Extension available on [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/dictionary-look-up/).
+
 
 ### Local
 
@@ -55,6 +58,7 @@ git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
 - [ ] Make a GIF to demo how it works.
 - [ ] Add warning when inputting too many characters. Open too many tabs at once can cause lag on the user's device
     - [ ]  limit to 5 words? If it exceeds this limit, add a delay
+- [ ] Handle Vietnamese input, auto convert it to 
 
 ### Done
 - [x] Search multiple words at once, using separator (`,`) ~~(user-defined)~~ (keep the extension simple)
