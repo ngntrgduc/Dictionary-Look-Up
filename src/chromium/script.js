@@ -24,6 +24,11 @@ function getSelectedDictionary() {
     return document.getElementById("dictionary").value;
 }
 
+function isInvalidWord(word) {
+    const regex = /[^a-zA-Z,\s-]/;
+    return regex.test(word);
+}
+
 // Focus to search box after changed dictionary or lose focus on select menu
 ["change", "focusout"].forEach(event => 
     document.querySelector("select").addEventListener(event, () => {
@@ -68,12 +73,24 @@ searchBox.addEventListener("keydown", function(e) {
 
     if (e.key === "Enter") {
         let word = e.target.value.toLowerCase().trim();
+
+        if (isInvalidWord(word)) {
+            e.preventDefault();
+            e.target.classList.add('error');
+            return;
+        } 
+
         localStorage.setItem("previous", word);
         
         let delimiter = ",";
         
         if (word.includes(delimiter)) {
             let words = word.split(",");
+            if (words.length >= 3) {
+                e.preventDefault();
+                e.target.classList.add('error');
+                return;
+            }
             for (word of words) {
                 lookUp(word, getSelectedDictionary());
             }
