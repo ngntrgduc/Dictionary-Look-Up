@@ -16,11 +16,11 @@ This extension will make the look up process less painful because you just need 
 
 ## Features
 - Support dictionaries: [Cambridge](https://dictionary.cambridge.org/), [Oxford](https://www.oxfordlearnersdictionaries.com/), [Merriam-Webster](https://www.merriam-webster.com/)
-- Easily toggle extension via shortcut `Alt` + `O` (default)
-- Easily change dictionary via `Tab` and `Shift` + `Tab` key
+- Easily toggle extension via shortcut `Alt + O` (default)
+- Easily change dictionary via `Tab` and `Shift + Tab` key
 - Get previously looked up word when press `↑` arrow key
 - Search multiple words at once, separated by a comma (`,`)
-- Prevent searching for mistyped words that contain invalid words, symbols, and numbers
+- Prevent searching for mistyped words that contain invalid characters, symbols, and numbers
 - **Simple** but yet **powerful**, **time-saving**
 
 
@@ -46,6 +46,7 @@ git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
 
 
 ## Todo & Ideas
+- [ ] Add a ROADMAP.md and move this section to that file. (When the extension having sufficient users 🥲)
 - [ ] Another port
     - [ ] ~~Chrome~~ (because it costs $5 to create an account 🥲)
     - [ ] Edge
@@ -53,11 +54,12 @@ git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
 - [ ] Options page
     - [ ] Custom 1st dictionary by changing order of URLs
     - [ ] Custom URLs to search not only for dictionary (general purpose, same as Vomnibar feature of Vimium, such as search video on Youtube,...)
-    - [ ] Custom delimiter (default is ,)...
+    - [ ] Custom delimiter (default is ,) but exclude space character, also check that delimiter is a single symbol (not character because it will conflict with English words)
     - [ ] Add option (checkbox) to remove "Tab to switch dictionary" behavior, maybe some people prefer the default behavior: press Tab to move to dictionary selection, and select it by mouse or navigation through arrow keys. Also, if there are lots of URLs, selecting options by using mouse will be easier
-    - [ ] Limit select options on popup? There's no need for many options to appear on the popup. 
+    - [ ] Limit select options on popup (with hard limit is 10 options)? There's no need for many options to appear on the popup. 
+    - [ ] Option for Opening in background instead of foreground
 - [ ] Prevent searching when input too many characters. Opening too many tabs at once can cause lag on the user's device and potentially result in the IP being banned.
-    - [ ] limit to 5 words? If it exceeds this limit, add a delay, or prevent opening more than 5 words (or a specific number of words, time delay, defined in the options page)
+    - [ ] limit to 5 words? If it exceeds this limit, add a delay (but bad for UX), or prevent opening more than 5 words (or a specific number of words defined in the options page), or just skip extra words, only search for first 5 words
 
 ### Done
 - [x] Search multiple words at once, using separator (`,`) ~~(user-defined)~~ (keep the extension simple)
@@ -75,6 +77,7 @@ git clone https://github.com/ngntrgduc/Dictionary-Look-Up.git
 - More limit of the previous word? -> Not optimal, use `Ctrl + H` instead
 - Auto convert Vietnamese characters (By using Telex typing method) to English -> Too specific, also it's hard to handle the Telex method
 - Search a word with all dictionaries via shortcut `Alt` + `Enter` -> Opening all dictionaries for a word is not necessary, and it become problematic when searching for multiple words
+- Remove duplicated words -> Not necessary
 
 ## Contributing
 If you found a bug or want to contribute, feel free to open a issue/pull requests. All contributions are welcomed.
