@@ -1,7 +1,7 @@
 const dictionaries = ["Cambridge", "Oxford", "Merriam-Webster"];
 const searchBox = document.getElementById("searchBox");
 
-function getURLs(word) {
+function getDictionaryURLs(word) {
     return  {
         "Cambridge": "https://dictionary.cambridge.org/dictionary/english/" + word,
         "Oxford": "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
@@ -15,7 +15,7 @@ function format(word) {
 
 function lookUp(word, selectedDictionary) {
     if (!word.trim()) return;
-    const urls = getURLs(format(word));
+    const urls = getDictionaryURLs(format(word));
     let url = urls[selectedDictionary];
     chrome.tabs.create({ url: url });
 }
@@ -86,13 +86,8 @@ searchBox.addEventListener("keydown", function(e) {
         
         if (word.includes(delimiter)) {
             let words = word.split(",");
-            if (words.length >= 3) {
-                e.preventDefault();
-                e.target.classList.add('error');
-                return;
-            }
-            for (word of words) {
-                lookUp(word, getSelectedDictionary());
+            for (w of words) {
+                lookUp(w, getSelectedDictionary());
             }
         } else {
             lookUp(word, getSelectedDictionary());

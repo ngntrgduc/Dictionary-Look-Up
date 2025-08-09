@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 10)
 })
 
-function getURLs(word) {
+function getDictionaryURLs(word) {
     return  {
         "Cambridge": "https://dictionary.cambridge.org/dictionary/english/" + word,
         "Oxford": "https://www.oxfordlearnersdictionaries.com/definition/english/" + word,
@@ -23,7 +23,7 @@ function format(word) {
 
 function lookUp(word, selectedDictionary) {
     if (!word.trim()) return;
-    const urls = getURLs(format(word));
+    const urls = getDictionaryURLs(format(word));
     let url = urls[selectedDictionary];
     browser.tabs.create({ url: url });
 }
@@ -92,8 +92,8 @@ searchBox.addEventListener("keydown", function(e) {
         
         if (word.includes(delimiter)) {
             let words = word.split(",");
-            for (word of words) {
-                lookUp(word, getSelectedDictionary());
+            for (w of words) {
+                lookUp(w, getSelectedDictionary());
             }
         } else {
             lookUp(word, getSelectedDictionary());
