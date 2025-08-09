@@ -30,8 +30,6 @@ Changelog entries and Git tags are available starting from version 2.15.0.
 ### Changed
 - Restructure the project, use folders instead of branches.
 
-### Fixed
-
 
 ## [2.14.0] - 2024-08-13
 ### Added 
