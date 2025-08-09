@@ -61,7 +61,6 @@ searchBox.addEventListener("keydown", function(e) {
         
         const currentIndex = dictionaries.indexOf(getSelectedDictionary());
         let nextIndex;
-
         if (e.shiftKey) {
             nextIndex = currentIndex === 0 ? dictionaries.length - 1 : currentIndex - 1;
         } else {
@@ -83,15 +82,17 @@ searchBox.addEventListener("keydown", function(e) {
         localStorage.setItem("previous", word);
         
         let delimiter = ",";
+        const selectedDictionary = getSelectedDictionary();
         
         if (word.includes(delimiter)) {
             let words = word.split(",");
             for (const w of words) {
-                lookUp(w, getSelectedDictionary());
+                lookUp(w, selectedDictionary);
             }
         } else {
-            lookUp(word, getSelectedDictionary());
+            lookUp(word, selectedDictionary);
         }
-        window.close()
+
+        window.close();
     }
 });
