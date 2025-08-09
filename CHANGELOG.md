@@ -21,7 +21,7 @@ Changelog entries and Git tags are available starting from version 2.15.0.
  -->
 
 
-## [2.15.0] - 2025-08-09
+## [[2.15.0](https://github.com/ngntrgduc/Dictionary-Look-Up/releases/tag/v2.15.0)] - 2025-08-09
 
 ### Added 
 - Prevent searching for invalid characters, symbols, and numbers.
