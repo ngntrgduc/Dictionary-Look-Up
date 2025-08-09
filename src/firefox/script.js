@@ -92,7 +92,7 @@ searchBox.addEventListener("keydown", function(e) {
         
         if (word.includes(delimiter)) {
             let words = word.split(",");
-            for (w of words) {
+            for (const w of words) {
                 lookUp(w, getSelectedDictionary());
             }
         } else {
