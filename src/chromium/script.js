@@ -29,6 +29,10 @@ function isInvalidWord(word) {
     return regex.test(word);
 }
 
+function removeDuplicate(words) {
+    return
+}
+
 // Focus to search box after changed dictionary or lose focus on select menu
 ["change", "focusout"].forEach(event => 
     document.querySelector("select").addEventListener(event, () => {
@@ -43,10 +47,23 @@ searchBox.addEventListener('input', (e) => {
     // Add the error class when input length equals maxlength
     if (currentLength >= maxLength) {
         e.target.classList.add('error');
+        showError('Maximum input length is 50.')
     } else {
         e.target.classList.remove('error');
+        clearError();
     }
 });
+
+
+const errorMsg = document.getElementById("errorMsg");
+
+function showError(message) {
+    errorMsg.textContent = message;
+}
+
+function clearError() {
+    errorMsg.textContent = "";
+}
 
 
 searchBox.addEventListener("keydown", function(e) {
@@ -76,6 +93,7 @@ searchBox.addEventListener("keydown", function(e) {
         if (isInvalidWord(word)) {
             e.preventDefault();
             e.target.classList.add('error');
+            showError("Only letters, spaces, commas, and hyphens are allowed.");
             return;
         } 
 
