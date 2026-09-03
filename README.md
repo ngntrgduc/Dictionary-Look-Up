@@ -1,17 +1,17 @@
 # Dictionary-Look-Up
-Extension to look up words **painlessly**.
+A browser extension to look up words **painlessly**.
 
 ![](/images/dlu.png)
 
-## Why this ?
-I'm so tired when looking up some words: 
+## Why?
+I'm so tired of looking up some words: 
 1. Open a new tab 
-2. Type dictionary web page 
+2. Type in a dictionary website (e.g. Cambridge, Oxford,...)
 3. Hit `Enter` 
-4. Type a word to look up 
+4. Type in the word to look up 
 5. Hit `Enter`
 
-This extension will make the look up process less painful because you just need to toggle the extension and look up the word.
+This extension makes the look up process less painful because you just need to toggle the extension and look up the word.
 
 
 ## Features
